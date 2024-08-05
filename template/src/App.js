@@ -24,21 +24,12 @@ class App extends Component {
   render () {
     const { width } = this.state;
     const isMobile = width <= 500;
-
-    if (isMobile) {
+    const className = (isMobile) ? "AppMobile" : "App";
       return (
-        <div className="AppMobile">
+        <div className={className}>
           <p> Hello, Mobile World </p>
         </div>
       );
-    }
-    else {
-      return (
-        <div className="App">
-          <p> Hello, World </p>
-        </div>
-      );
-    }
   }
 }
 
